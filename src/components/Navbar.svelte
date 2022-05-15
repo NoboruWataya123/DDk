@@ -8,7 +8,7 @@
                 src="https://unsplash.it/200/200?image=10"
                 alt="SvelteKit"
             /> -->
-            Placeholder
+            <a href="/">Placeholder</a>
         </div>
         <div class="nav__menu">
             <a href="https://sveltekit.com/docs">Docs</a>
@@ -17,7 +17,7 @@
             <a href="https://sveltekit.com/contribute">Contribute</a>
         </div>
         <div>
-            <button class="login">Login</button>
+            <a class="login" href="login">Login</a>
         </div>
     </nav>
 </section>
@@ -35,7 +35,7 @@
         height: 100%;
         flex-direction: row;
     }
-    .nav__logo {
+    .nav__logo a {
         font-size: 1.5rem;
         font-style: italic;
         font-weight: bold;
@@ -48,7 +48,7 @@
         width: 40%;
         height: 100%;
     }
-    .nav__menu a {
+    a {
         text-decoration: none;
         color: #000;
         font-size: 1.2rem;
