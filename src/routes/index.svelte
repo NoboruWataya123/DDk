@@ -1,31 +1,12 @@
 <script lang="ts">
-    let name = "SvelteKit";
-    import Navbar from "../components/Navbar.svelte";
     import FrontPage from "../components/FrontPage.svelte";
+
+    let name = "SvelteKit";
 </script>
 
-<div class="container">
-    <div class="header__line" />
-    <div class="main">
-        <Navbar />
-        <FrontPage />
-    </div>
-</div>
+<span>
+    <FrontPage />
+</span>
 
 <style>
-    .container {
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-    .header__line {
-        width: 100%;
-        height: 5%;
-        background-color: #000;
-    }
-    .main {
-        width: 100%;
-        height: 90%;
-        padding: 0 5% 0 5%;
-    }
 </style>
