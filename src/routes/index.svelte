@@ -1,12 +1,14 @@
 <script lang="ts">
     let name = "SvelteKit";
     import Navbar from "../components/Navbar.svelte";
+    import FrontPage from "../components/FrontPage.svelte";
 </script>
 
 <div class="container">
     <div class="header__line" />
     <div class="main">
         <Navbar />
+        <FrontPage />
     </div>
 </div>
 
@@ -24,7 +26,6 @@
     .main {
         width: 100%;
         height: 90%;
-        display: flex;
         padding: 0 5% 0 5%;
     }
 </style>
