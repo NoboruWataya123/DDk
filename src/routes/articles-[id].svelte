@@ -18,7 +18,13 @@
             content:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, alias!",
         },
-        { id: "3", title: "Henri The Existential Cat", content: "content123" },
+        {
+            id: "3",
+            title: "Henri The Existential Cat",
+            imgsrc: "/desert.webp",
+            content:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, alias!",
+        },
     ];
     let res: any;
 

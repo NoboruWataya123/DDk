@@ -7,7 +7,9 @@
 
 <article class="secondary__article">
     <div class="secondary__article_block">
-        <img class="secondary__article_img" src={imgsrc} alt="sea" />
+        <a href={`/articles-${id}`}>
+            <img class="secondary__article_img" src={imgsrc} alt="sea" />
+        </a>
     </div>
     <div class="secondary__article_block">
         <a class="secondary__article_heading" href={`/articles-${id}`}
