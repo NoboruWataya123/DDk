@@ -2,7 +2,6 @@
     export let id = "";
     export let imgsrc = "";
     export let title = "";
-    export let content = "";
 </script>
 
 <article class="secondary__article">
@@ -15,7 +14,6 @@
         <a class="secondary__article_heading" href={`/articles-${id}`}
             >{title}</a
         >
-        {content}
     </div>
 </article>
 
@@ -52,12 +50,17 @@
     @media screen and (max-width: 600px) {
         .secondary__article {
             flex-direction: column;
+            height: 40%;
         }
         .secondary__article_block {
             display: block;
             width: 100%;
             height: 20%;
             height: auto;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: start;
+            padding: 0 1rem 0 0;
         }
         .secondary__article_block:nth-child(odd) {
             margin: 0;

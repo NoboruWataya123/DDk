@@ -41,7 +41,7 @@
         {#each articles as { id, title, imgsrc, content }, i}
             <!-- scipr first element -->
             {#if i != 0 && i < 3}
-                <Article {id} {imgsrc} {title} {content} />
+                <Article {id} {imgsrc} {title} />
             {/if}
         {/each}
     </div>
@@ -113,7 +113,7 @@
         }
         .main {
             width: 100%;
-            margin: 0 0 1rem 0;
+            margin: 0 0 3rem 0;
         }
         .main_block {
             position: absolute;
