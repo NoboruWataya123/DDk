@@ -120,4 +120,27 @@
     .main__block_date {
         width: 15%;
     }
+
+    @media screen and (max-width: 600px) {
+        .container {
+            width: 100%;
+        }
+        .main {
+            width: 100%;
+        }
+        .main__block {
+            width: 100%;
+            height: 100%;
+        }
+        .main_links {
+            width: 100vw;
+        }
+        .main__block_article {
+            width: 4rem;
+            width: 60vw;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
 </style>

@@ -49,4 +49,27 @@
         color: #000;
         text-decoration: none;
     }
+    @media screen and (max-width: 600px) {
+        .secondary__article {
+            flex-direction: column;
+        }
+        .secondary__article_block {
+            display: block;
+            width: 100%;
+            height: 20%;
+            height: auto;
+        }
+        .secondary__article_block:nth-child(odd) {
+            margin: 0;
+            height: 60%;
+            width: 100%;
+        }
+        .secondary__article_img {
+            width: 100%;
+            height: auto;
+        }
+        .secondary__article_heading {
+            font-size: 1.2rem;
+        }
+    }
 </style>

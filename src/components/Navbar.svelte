@@ -1,78 +1,186 @@
 <script></script>
 
-<section class="container">
-    <nav class="nav">
-        <div class="nav__logo">
-            <!-- <img
-                class="nav__logo_img"
-                src="https://unsplash.it/200/200?image=10"
-                alt="SvelteKit"
-            /> -->
-            <a href="/">Placeholder</a>
+<nav>
+    <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+                <span class="line line1" />
+                <span class="line line2" />
+                <span class="line line3" />
+            </div>
+            <div class="logo">
+                <h1>Navbar</h1>
+            </div>
+            <div class="menu-items">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">about</a></li>
+                <li><a href="/">blogs</a></li>
+                <li><a href="/">portfolio</a></li>
+                <li><a href="/">contact</a></li>
+            </div>
+            <div class="overlay" />
         </div>
-        <div class="nav__menu">
-            <a href="https://sveltekit.com/docs">Docs</a>
-            <a href="https://sveltekit.com/blog">Blog</a>
-            <a href="https://sveltekit.com/community">Community</a>
-            <a href="https://sveltekit.com/contribute">Contribute</a>
-        </div>
-        <div>
-            <a class="login" href="login">Login</a>
-        </div>
-    </nav>
-</section>
+    </div>
+</nav>
 
 <style>
     .container {
-        width: 100%;
-        height: 15%;
+        max-width: 1050px;
+        width: 90%;
+        margin: auto;
+        z-index: 100;
     }
-    .nav {
+
+    .navbar {
+        width: 100%;
+        box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    }
+
+    .nav-container {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        flex-direction: row;
-    }
-    .nav__logo a {
-        font-size: 1.5rem;
-        font-style: italic;
-        font-weight: bold;
-        margin: 0 0 0 1rem;
-    }
-    .nav__menu {
-        display: flex;
         align-items: center;
-        justify-content: space-evenly;
-        width: 40%;
-        height: 100%;
+        height: 62px;
     }
-    a {
+
+    .navbar .menu-items {
+        display: flex;
+    }
+
+    .navbar .nav-container li {
+        list-style: none;
+    }
+
+    .navbar .nav-container a {
         text-decoration: none;
-        color: #000;
+        color: #0e2431;
+        font-weight: 500;
         font-size: 1.2rem;
+        padding: 0.7rem;
     }
-    .login {
-        background-color: #000;
-        width: 100%;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        font-size: 1.2rem;
+
+    .navbar .nav-container a:hover {
+        font-weight: bolder;
+    }
+
+    .nav-container {
+        display: block;
+        position: relative;
+        height: 60px;
+    }
+
+    .nav-container .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
         cursor: pointer;
-        margin: 0 1rem 0 0;
+        z-index: 150;
     }
-    .login:focus {
-        outline: none;
+
+    .nav-container .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-    .login:hover {
-        background-color: rgb(78, 68, 68);
-        color: rgb(255, 255, 255);
+
+    .nav-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
     }
-    /* scale on click */
-    .login:active {
-        transform: scale(0.95);
+
+    .nav-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .nav-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar .menu-items {
+        padding-top: 120px;
+        background-color: white;
+        height: 100vh;
+        width: 70vw;
+        transform: translate(-250%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+        z-index: 100;
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        z-index: 100;
+    }
+
+    .logo {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 1.2rem;
+        color: #0e2431;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .logo {
+        display: none;
+    }
+    @media screen and (max-width: 600px) {
+        .navbar .menu-items {
+            padding-top: 120px;
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+            z-index: 100;
+        }
     }
 </style>

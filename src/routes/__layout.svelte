@@ -27,4 +27,13 @@
         height: 90%;
         padding: 0 5% 0 5%;
     }
+    @media screen and (max-width: 600px) {
+        .container {
+            width: 100%;
+            min-height: 100vh;
+        }
+        .main {
+            width: 100%;
+        }
+    }
 </style>

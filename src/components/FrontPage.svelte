@@ -56,6 +56,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
+        z-index: 0;
     }
     .main {
         margin: 0 1rem 0 1rem;
@@ -99,5 +100,39 @@
     .main_img {
         width: 100%;
         height: 100%;
+    }
+
+    /* create media query for mobile design one column */
+    @media screen and (max-width: 600px) {
+        .container {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin: 5rem 0 2rem 0;
+            z-index: 0;
+        }
+        .main {
+            width: 100%;
+            margin: 0 0 1rem 0;
+        }
+        .main_block {
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            padding: 0 1rem 0 2rem;
+            font-size: 0.7rem;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .main_img {
+            width: 100%;
+            height: 100%;
+        }
+        .secondary {
+            width: 100%;
+            min-height: 100%;
+            flex-direction: column;
+        }
     }
 </style>
